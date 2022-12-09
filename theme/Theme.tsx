@@ -2,7 +2,10 @@ import React, { createContext, useEffect, useState } from 'react';
 import { ThemeProvider as ThemeProviderStyled } from 'styled-components/native';
 import { darkTheme } from './darkTheme';
 import { lightTheme } from './lightTheme';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import {
+  getAsyncStorageData,
+  storeAsyncStorageData,
+} from '../utils/AsyncStorageUtils';
 
 export enum ThemeType {
   light = 'light',
@@ -32,11 +35,9 @@ export const ThemeProvider = ({ children }: Props) => {
 
   async function loadTheme() {
     try {
-      const savedTheme = await AsyncStorage.getItem('@storage_Key');
-      if (savedTheme !== null) {
-        // value previously stored
-        console.log(' >>> SAVED THEME?? ', savedTheme);
-        // setTheme(savedTheme);
+      const savedTheme = await getAsyncStorageData('@theme');
+      if (savedTheme) {
+        setTheme(savedTheme);
       }
     } catch (e) {
       // error reading value
@@ -45,14 +46,16 @@ export const ThemeProvider = ({ children }: Props) => {
 
   function toggleTheme() {
     let selectTheme;
+
     if (theme === ThemeType.light) {
       selectTheme = ThemeType.dark;
     } else {
       selectTheme = ThemeType.light;
     }
+
     setTheme(selectTheme);
 
-    AsyncStorage.setItem('@theme', selectTheme);
+    storeAsyncStorageData('@theme', selectTheme);
   }
 
   return (

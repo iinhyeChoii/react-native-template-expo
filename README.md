@@ -1,12 +1,8 @@
 # React Native Template: Expo
 ## 💁 Intro
-
---- 
 새로운 프로젝트를 빠르게 시작하기 위한 React Native 스타터 키트입니다.
 
 ## 💻 Tech Stack
-
----
 | 라이브러리             | 카테고리           |
 |-------------------|----------------|
 | React Native      | 모바일 프레임워크      |
@@ -21,8 +17,6 @@
 | RN Reanimated     | 애니메이션          |
 
 ### 📑 DOCS
-
----
 - [React Native](https://reactnative.dev/docs/getting-started)
 - [Expo](https://docs.expo.dev/tutorial/introduction/)
 - [TypeScript](https://www.typescriptlang.org/)
@@ -33,8 +27,6 @@
 
 
 ## 🚀 Getting started
-
----
 사용 중인 IDE에 ``eslint``, ``prettier`` 플러그인을 미리 설치해주세요.
 
 ```bash

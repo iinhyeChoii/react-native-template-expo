@@ -1,10 +1,24 @@
 import styled from 'styled-components/native';
+import { FontAwesome } from '@expo/vector-icons';
 
+/**
+ * [ Common ]
+ */
 export const Container = styled.View`
   flex: 1;
   align-items: center;
-  justify-content: center;
   background-color: ${props => props.theme.colors.background};
+`;
+
+export const Row = styled.View`
+  flex-direction: row;
+  align-items: center;
+`;
+
+export const Title = styled.Text`
+  font-size: 20px;
+  font-weight: bold;
+  color: ${props => props.theme.colors.text};
 `;
 
 export const Text = styled.Text`
@@ -12,5 +26,9 @@ export const Text = styled.Text`
 `;
 
 export const View = styled.View`
-  background-color: ${props => props.theme.colors.tint};
+  background-color: ${props => props.theme.colors.background};
 `;
+
+/**
+ * [ Navigation ]
+ */
