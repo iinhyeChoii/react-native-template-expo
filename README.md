@@ -23,15 +23,15 @@
 - [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
 - [styled-component](https://styled-components.com/docs)
-
-
+- [AsyncStorage](https://docs.expo.dev/versions/latest/sdk/async-storage/)
 
 ## 🚀 Getting started
 사용 중인 IDE에 ``eslint``, ``prettier`` 플러그인을 미리 설치해주세요.
 
 ```bash
-git clone https://github.com/iinhyeChoii/react-native-template-expo.git
+git clone https://github.com/iinhyeChoii/react-native-template-expo.git your-app-name
 cd react-native-template-expo
+yarn
 npx expo start
 i # iOS
 a # android
